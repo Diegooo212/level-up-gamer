@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer - Accesorios</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+  <h1>🎮 Level-Up Gamer</h1>
+  <!-- Menú dinámico -->
+  <nav id="mainMenu"></nav>
+  <!-- Info de usuario -->
+  <div id="userInfo"></div>
+</header>
+
+    <main>
+        <h2>Accesorios Disponibles</h2>
+        <section class="filtros">
+  <h2>🔍 Buscar y Filtrar Productos</h2>
+  <input type="text" id="buscar" placeholder="Buscar por nombre...">
+
+  <div class="filtros-precio">
+    <label>Precio mínimo: <input type="number" id="precioMin" placeholder="0"></label>
+    <label>Precio máximo: <input type="number" id="precioMax" placeholder="999999"></label>
+  </div>
+
+  <div class="filtros-marca">
+    <label><input type="checkbox" class="marca" value="Logitech"> Logitech</label>
+    <label><input type="checkbox" class="marca" value="HyperX"> HyperX</label>
+    <label><input type="checkbox" class="marca" value="Razer"> Razer</label>
+    <label><input type="checkbox" class="marca" value="Corsair"> Corsair</label>
+  </div>
+
+  <button id="aplicarFiltros">Aplicar Filtros</button>
+  <button id="limpiarFiltros">Limpiar</button>
+</section>
+    <div class="productos-grid">
+
+      <!-- Mouse Logitech G502 HERO -->
+      <div class="card" data-precio="69990" data-marca="Logitech">
+        <img src="https://resource.logitechg.com/content/dam/gaming/en/products/g502-hero/g502-hero-gallery-1.png" alt="Logitech G502 HERO">
+        <h3>Logitech G502 HERO</h3>
+        <p><b>Marca:</b> Logitech</p>
+        <p><b>Precio:</b> $69.990</p>
+        <p><b>Stock:</b> 30 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Logitech G502 HERO', brand:'Logitech', price:69990, stock:30})">🛒 Comprar</button>
+      </div>
+
+      <!-- Razer DeathAdder V2 -->
+      <div class="card" data-precio="59990" data-marca="Razer">
+        <img src="https://assets3.razerzone.com/XlJCRg0XvN4eHIvjLxgPLZld0dfzpOwL0A6DVyi3cO0/500x500-razer-deathadder-v2-01__store_gallery.png" alt="Razer DeathAdder V2">
+        <h3>Razer DeathAdder V2</h3>
+        <p><b>Marca:</b> Razer</p>
+        <p><b>Precio:</b> $59.990</p>
+        <p><b>Stock:</b> 25 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Razer DeathAdder V2', brand:'Razer', price:59990, stock:25})">🛒 Comprar</button>
+      </div>
+
+      <!-- HyperX Alloy Origins -->
+      <div class="card" data-precio="109990" data-marca="HyperX">
+        <img src="https://www.hyperx.com/_next/image?url=https%3A%2F%2Fmedia.kingston.com%2Fhyperx%2Fproduct%2FHHX-KB1-RGB_US_1_zm-lg.jpg&w=640&q=75" alt="HyperX Alloy Origins">
+        <h3>HyperX Alloy Origins</h3>
+        <p><b>Marca:</b> HyperX</p>
+        <p><b>Precio:</b> $109.990</p>
+        <p><b>Stock:</b> 15 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'HyperX Alloy Origins', brand:'HyperX', price:109990, stock:15})">🛒 Comprar</button>
+      </div>
+
+      <!-- Razer BlackWidow V4 -->
+      <div class="card" data-precio="139990" data-marca="Razer">
+        <img src="https://assets3.razerzone.com/JlV3CyMfCVxYvBy06SnVAk0nnNA3uKxR271GGBqBPcw/500x500-blackwidow-v4-02__store_gallery.png" alt="Razer BlackWidow V4">
+        <h3>Razer BlackWidow V4</h3>
+        <p><b>Marca:</b> Razer</p>
+        <p><b>Precio:</b> $139.990</p>
+        <p><b>Stock:</b> 12 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Razer BlackWidow V4', brand:'Razer', price:139990, stock:12})">🛒 Comprar</button>
+      </div>
+
+      
+
+      <!-- Logitech G640 Mousepad XL -->
+      <div class="card" data-precio="39990" data-marca="Logitech">
+        <img src="https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/products/g640/g640-gallery-1.png" alt="Logitech G640">
+        <h3>Logitech G640 Mousepad XL</h3>
+        <p><b>Marca:</b> Logitech</p>
+        <p><b>Precio:</b> $39.990</p>
+        <p><b>Stock:</b> 50 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Logitech G640 Mousepad XL', brand:'Logitech', price:39990, stock:50})">🛒 Comprar</button>
+      </div>
+
+      <!-- Razer Goliathus Extended Chroma -->
+      <div class="card" data-precio="69990" data-marca="Razer">
+        <img src="https://assets3.razerzone.com/w9vrLpzjAU6YewsGQKzBSSMSmc5Q_5r9Tx8m6yOD87c/500x500-razer-goliathus-chroma-03__store_gallery.png" alt="Razer Goliathus Extended">
+        <h3>Razer Goliathus Extended Chroma</h3>
+        <p><b>Marca:</b> Razer</p>
+        <p><b>Precio:</b> $69.990</p>
+        <p><b>Stock:</b> 35 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Razer Goliathus Extended Chroma', brand:'Razer', price:69990, stock:35})">🛒 Comprar</button>
+      </div>
+
+      <!-- HyperX Pulsefire FPS Pro -->
+      <div class="card" data-precio="49990" data-marca="HyperX">
+        <img src="https://www.hyperx.com/_next/image?url=https%3A%2F%2Fmedia.kingston.com%2Fhyperx%2Fproduct%2FHHX-MC1-BK-RD%2Fhhx-mc1-bk-rd-1-lg.jpg&w=640&q=75" alt="HyperX Pulsefire FPS Pro">
+        <h3>HyperX Pulsefire FPS Pro</h3>
+        <p><b>Marca:</b> HyperX</p>
+        <p><b>Precio:</b> $49.990</p>
+        <p><b>Stock:</b> 20 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'HyperX Pulsefire FPS Pro', brand:'HyperX', price:49990, stock:20})">🛒 Comprar</button>
+      </div>
+
+      
+
+      <!-- HyperX QuadCast S -->
+      <div class="card" data-precio="139990" data-marca="HyperX">
+        <img src="https://media.kingston.com/hyperx/product/hx-product-microphone-quadcasts-s-1-md.jpg" alt="HyperX QuadCast S">
+        <h3>HyperX QuadCast S</h3>
+        <p><b>Marca:</b> HyperX</p>
+        <p><b>Precio:</b> $139.990</p>
+        <p><b>Stock:</b> 22 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'HyperX QuadCast S', brand:'HyperX', price:139990, stock:22})">🛒 Comprar</button>
+      </div>
+
+      <!-- Razer Seiren Emote -->
+      <div class="card" data-precio="149990" data-marca="Razer">
+        <img src="https://assets3.razerzone.com/Nd8nHhr4ZoHWVywDwWq9j4XjWl3tT9Vgjhj78W0lSnE/500x500-razer-seiren-emote-01__store_gallery.png" alt="Razer Seiren Emote">
+        <h3>Razer Seiren Emote</h3>
+        <p><b>Marca:</b> Razer</p>
+        <p><b>Precio:</b> $149.990</p>
+        <p><b>Stock:</b> 14 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Razer Seiren Emote', brand:'Razer', price:149990, stock:14})">🛒 Comprar</button>
+      </div>
+
+      <!-- Corsair K70 RGB MK.2 -->
+      <div class="card" data-precio="129990" data-marca="Corsair">
+        <img src="https://www.corsair.com/medias/sys_master/images/images/h0f/hdb/9110534735902/-CH-9109010-NA-Gallery-K70-RGB-MK2-01.png" alt="Corsair K70 RGB MK.2">
+        <h3>Corsair K70 RGB MK.2</h3>
+        <p><b>Marca:</b> Corsair</p>
+        <p><b>Precio:</b> $129.990</p>
+        <p><b>Stock:</b> 16 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Corsair K70 RGB MK.2', brand:'Corsair', price:129990, stock:16})">🛒 Comprar</button>
+      </div>
+
+      
+
+      <!-- Logitech G Pro X Superlight -->
+      <div class="card" data-precio="99990" data-marca="Logitech">
+        <img src="https://resource.logitechg.com/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-gallery-1.png" alt="Logitech G Pro X Superlight">
+        <h3>Logitech G Pro X Superlight</h3>
+        <p><b>Marca:</b> Logitech</p>
+        <p><b>Precio:</b> $99.990</p>
+        <p><b>Stock:</b> 28 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Logitech G Pro X Superlight', brand:'Logitech', price:99990, stock:28})">🛒 Comprar</button>
+      </div>
+
+    </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Level-Up Gamer - Todos los derechos reservados</p>
+    </footer>
+    <script src="static/script.js"></script>
+    
+</body>
+</html>

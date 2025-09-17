@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Level-Up Gamer - Inicio</title>
+  <link rel="stylesheet" href="static/style.css"/>
+</head>
+<body>
+  <header>
+  <h1>🎮 Level-Up Gamer</h1>
+  <!-- Menú dinámico -->
+  <nav id="mainMenu"></nav>
+  <!-- Info de usuario -->
+  <div id="userInfo"></div>
+</header>
+
+
+  <!-- Hero principal (mismo look que antes) -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a Level-Up Gamer</h1>
+      <p>Tu tienda online gamer en Chile 🚀 Consolas, PCs, accesorios y más.</p>
+      <a href="productos.html" class="btn">Explora Productos</a>
+    </div>
+  </section>
+
+  <!-- Categorías rápidas -->
+  <section class="categorias">
+    <h2>Categorías</h2>
+    <div class="categorias-grid">
+      <a href="consolas.html" class="categoria-card">
+        <img src="https://img.icons8.com/color/96/000000/controller.png" alt="Consolas">
+        <h3>Consolas</h3>
+      </a>
+      <a href="computadores.html" class="categoria-card">
+        <img src="https://img.icons8.com/color/96/000000/computer.png" alt="PC Gamer">
+        <h3>PC Gamer</h3>
+      </a>
+      <a href="accesorios.html" class="categoria-card">
+        <img src="https://img.icons8.com/color/96/000000/joystick.png" alt="Accesorios">
+        <h3>Accesorios</h3>
+      </a>
+      <a href="sillas.html" class="categoria-card">
+        <img src="https://img.icons8.com/color/96/000000/office-chair.png" alt="Sillas Gamer">
+        <h3>Sillas Gamer</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Productos destacados (con botones de compra funcionando) -->
+  <section class="destacados">
+    <h2>🔥 Productos Destacados</h2>
+    <div class="destacados-grid">
+      <div class="destacado-card">
+        <img src="https://via.placeholder.com/400x260?text=PS5" alt="PlayStation 5">
+        <h3>PlayStation 5</h3>
+        <p><strong>Marca:</strong> Sony</p>
+        <p><strong>Precio:</strong> $600.000</p>
+        <p><strong>Stock:</strong> 5 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'PlayStation 5', brand:'Sony', price:600000, stock:5})">🛒 Comprar</button>
+      </div>
+
+      <div class="destacado-card">
+        <img src="https://via.placeholder.com/400x260?text=Silla+Cougar" alt="Silla Gamer Cougar">
+        <h3>Silla Gamer Cougar</h3>
+        <p><strong>Marca:</strong> Cougar</p>
+        <p><strong>Precio:</strong> $150.000</p>
+        <p><strong>Stock:</strong> 12 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'Silla Gamer Cougar', brand:'Cougar', price:150000, stock:12})">🛒 Comprar</button>
+      </div>
+
+      <div class="destacado-card">
+        <img src="https://via.placeholder.com/400x260?text=RTX+4070+Ti" alt="RTX 4070 Ti">
+        <h3>Tarjeta Gráfica RTX 4070 Ti</h3>
+        <p><strong>Marca:</strong> NVIDIA</p>
+        <p><strong>Precio:</strong> $950.000</p>
+        <p><strong>Stock:</strong> 3 unidades</p>
+        <button class="buy-btn"
+          onclick="addToCart({name:'RTX 4070 Ti', brand:'NVIDIA', price:950000, stock:3})">🛒 Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Level-Up Gamer - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="static/script.js"></script>
+</body>
+</html>

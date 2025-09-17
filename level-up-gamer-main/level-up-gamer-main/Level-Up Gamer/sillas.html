@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer - Sillas Gamer</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+  <h1>🎮 Level-Up Gamer</h1>
+  <!-- Menú dinámico -->
+  <nav id="mainMenu"></nav>
+  <!-- Info de usuario -->
+  <div id="userInfo"></div>
+</header>
+
+    <main>
+        <h2>Sillas Disponibles</h2>
+        <section class="filtros">
+  <h2>🔍 Buscar y Filtrar Productos</h2>
+  <input type="text" id="buscar" placeholder="Buscar por nombre...">
+
+  <div class="filtros-precio">
+    <label>Precio mínimo: <input type="number" id="precioMin" placeholder="0"></label>
+    <label>Precio máximo: <input type="number" id="precioMax" placeholder="999999"></label>
+  </div>
+
+  <div class="filtros-marca">
+    <label><input type="checkbox" class="marca" value="Nacon"> Nacon</label>
+    <label><input type="checkbox" class="marca" value="DxRacer"> DxRacer</label>
+    <label><input type="checkbox" class="marca" value="Razer"> Razer</label>
+    <label><input type="checkbox" class="marca" value="Woxter"> Woxter</label>
+    <label><input type="checkbox" class="marca" value="Corsair"> Corsair</label>
+    <label><input type="checkbox" class="marca" value="Mars"> Mars</label>
+  </div>
+
+  <button id="aplicarFiltros">Aplicar Filtros</button>
+  <button id="limpiarFiltros">Limpiar</button>
+</section>
+    <div class="productos-grid">
+
+      <!-- Razer Iskur -->
+          <div class="card" data-precio="399990" data-marca="Razer">
+            <img src="https://assets3.razerzone.com/2wB_iskur_black_green.png" alt="Razer Iskur">
+            <h3>Razer Iskur</h3>
+            <p><b>Marca:</b> Razer</p>
+            <p><b>Precio:</b> $399.990</p>
+            <p><b>Stock:</b> 7 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'Razer Iskur', brand:'Razer', price:399990, stock:7})">🛒 Comprar</button>
+          </div>
+
+          <!-- Razer Enki X -->
+          <div class="card" data-precio="329990" data-marca="Razer">
+            <img src="https://assets3.razerzone.com/EnkiX_black.png" alt="Razer Enki X">
+            <h3>Razer Enki X</h3>
+            <p><b>Marca:</b> Razer</p>
+            <p><b>Precio:</b> $329.990</p>
+            <p><b>Stock:</b> 9 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'Razer Enki X', brand:'Razer', price:329990, stock:9})">🛒 Comprar</button>
+          </div>
+
+          <!-- Nacon CH-300 -->
+          <div class="card" data-precio="219990" data-marca="Nacon">
+            <img src="https://www.nacongaming.com/uploads/images/product/CH-300.png" alt="Nacon CH-300">
+            <h3>Nacon CH-300</h3>
+            <p><b>Marca:</b> Nacon</p>
+            <p><b>Precio:</b> $219.990</p>
+            <p><b>Stock:</b> 12 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'Nacon CH-300', brand:'Nacon', price:219990, stock:12})">🛒 Comprar</button>
+          </div>
+
+          <!-- Nacon CH-500 -->
+          <div class="card" data-precio="259990" data-marca="Nacon">
+            <img src="https://www.nacongaming.com/uploads/images/product/CH-500.png" alt="Nacon CH-500">
+            <h3>Nacon CH-500</h3>
+            <p><b>Marca:</b> Nacon</p>
+            <p><b>Precio:</b> $259.990</p>
+            <p><b>Stock:</b> 10 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'Nacon CH-500', brand:'Nacon', price:259990, stock:10})">🛒 Comprar</button>
+          </div>
+
+          <!-- DxRacer Formula Series -->
+          <div class="card" data-precio="349990" data-marca="DxRacer">
+            <img src="https://www.dxracer.com/media/catalog/product/f/o/formula_series_black_red.png" alt="DxRacer Formula Series">
+            <h3>DxRacer Formula Series</h3>
+            <p><b>Marca:</b> DxRacer</p>
+            <p><b>Precio:</b> $349.990</p>
+            <p><b>Stock:</b> 6 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'DxRacer Formula Series', brand:'DxRacer', price:349990, stock:6})">🛒 Comprar</button>
+          </div>
+
+          <!-- DxRacer Racing Series -->
+          <div class="card" data-precio="379990" data-marca="DxRacer">
+            <img src="https://www.dxracer.com/media/catalog/product/r/a/racing_series_black_white.png" alt="DxRacer Racing Series">
+            <h3>DxRacer Racing Series</h3>
+            <p><b>Marca:</b> DxRacer</p>
+            <p><b>Precio:</b> $379.990</p>
+            <p><b>Stock:</b> 5 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'DxRacer Racing Series', brand:'DxRacer', price:379990, stock:5})">🛒 Comprar</button>
+          </div>
+
+          <!-- Woxter Stinger Station -->
+          <div class="card" data-precio="189990" data-marca="Woxter">
+            <img src="https://www.woxter.com/images/stinger-station.png" alt="Woxter Stinger Station">
+            <h3>Woxter Stinger Station</h3>
+            <p><b>Marca:</b> Woxter</p>
+            <p><b>Precio:</b> $189.990</p>
+            <p><b>Stock:</b> 14 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'Woxter Stinger Station', brand:'Woxter', price:189990, stock:14})">🛒 Comprar</button>
+          </div>
+
+          <!-- Corsair TC200 -->
+          <div class="card" data-precio="299990" data-marca="Corsair">
+            <img src="https://www.corsair.com/medias/sys_master/images/images/h8f/hc7/9791284668446/TC200_black.png" alt="Corsair TC200">
+            <h3>Corsair TC200</h3>
+            <p><b>Marca:</b> Corsair</p>
+            <p><b>Precio:</b> $299.990</p>
+            <p><b>Stock:</b> 8 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'Corsair TC200', brand:'Corsair', price:299990, stock:8})">🛒 Comprar</button>
+          </div>
+
+          <!-- Mars Gaming MGC-ERGO -->
+          <div class="card" data-precio="169990" data-marca="Mars">
+            <img src="https://marsgaming.eu/uploads/images/products/mgc-ergo-black.png" alt="Mars Gaming MGC-ERGO">
+            <h3>Mars Gaming MGC-ERGO</h3>
+            <p><b>Marca:</b> Mars</p>
+            <p><b>Precio:</b> $169.990</p>
+            <p><b>Stock:</b> 15 unidades</p>
+            <button class="buy-btn"
+              onclick="addToCart({name:'Mars Gaming MGC-ERGO', brand:'Mars', price:169990, stock:15})">🛒 Comprar</button>
+          </div>
+
+    </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Level-Up Gamer - Todos los derechos reservados</p>
+    </footer>
+      <script src="static/script.js"></script>
+
+</body>
+</html>

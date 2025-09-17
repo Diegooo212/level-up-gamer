@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header>
+  <h1>🎮 Level-Up Gamer</h1>
+  <!-- Menú dinámico -->
+  <nav id="mainMenu"></nav>
+  <!-- Info de usuario -->
+  <div id="userInfo"></div>
+</header>
+
+  <main class="admin-container">
+    <h2>Gestión de Productos</h2>
+
+    <!-- Formulario para agregar productos -->
+    <form id="addProductForm">
+      <input type="text" id="name" placeholder="Nombre del producto" required>
+      <input type="text" id="brand" placeholder="Marca" required>
+      <input type="number" id="price" placeholder="Precio" required>
+      <input type="number" id="stock" placeholder="Stock" required>
+      <input type="text" id="img" placeholder="URL de la imagen">
+      <button type="submit">Agregar Producto</button>
+    </form>
+
+    <!-- Lista de productos -->
+    <h3>Productos actuales</h3>
+    <ul id="productList"></ul>
+
+    <hr>
+
+    <h2>Productos destacados</h2>
+    <ul id="featuredList"></ul>
+    <form id="addFeaturedForm">
+      <input type="text" id="featuredName" placeholder="Nombre del producto destacado" required>
+      <button type="submit">Agregar a Destacados</button>
+    </form>
+  </main>
+
+  <script src="static/script.js"checkAuth("admin");></script>
+</body>
+</html>

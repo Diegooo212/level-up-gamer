@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Level-Up Gamer</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header>
+  <h1>🎮 Level-Up Gamer</h1>
+  <!-- Menú dinámico -->
+  <nav id="mainMenu"></nav>
+  <!-- Info de usuario -->
+  <div id="userInfo"></div>
+</header>
+
+  <main class="carrito-container">
+    <h2>Resumen de tu compra</h2>
+    <table class="carrito-table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="carrito"></tbody>
+    </table>
+
+    <div class="carrito-total">
+      <h3>Total: $<span id="total">0</span></h3>
+      <button class="btn-comprar">Finalizar Compra</button>
+    </div>
+  </main>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
+
+
