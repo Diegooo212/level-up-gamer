@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Level-Up Gamer</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header>
+    <h1>🎮 Level-Up Gamer</h1>
+    <nav id="mainMenu"></nav>
+    
+    <div class="header-right">
+      <div id="userActions"></div>
+      <a href="carrito.html" class="carrito-btn">🛒 Carrito</a>
+    </div>
+  </header>
+
+  <main class="carrito-container">
+    <h2>Resumen de tu compra</h2>
+    <table class="carrito-table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="carrito"></tbody>
+    </table>
+
+    <div class="carrito-total">
+    <p>Subtotal: <span id="subtotal-carrito">$0</span></p>
+    
+    <p id="linea-descuento" style="display: none;">
+        Descuento Duoc UC (15%): <span id="monto-descuento" class="descuento-verde">-$0</span>
+    </p>
+    
+    <hr>
+    
+    <h3>Total a Pagar: <span id="total-final-carrito">$0</span></h3>
+</div>
+<button class="btn-comprar" onclick="procesarCompra()">Finalizar Compra</button>
+  </main>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
+
+

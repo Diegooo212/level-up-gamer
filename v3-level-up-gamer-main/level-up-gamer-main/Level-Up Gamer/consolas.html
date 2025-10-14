@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer - Computadores</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+      <h1>🎮 Level-Up Gamer</h1>
+      <nav id="mainMenu"></nav>
+      
+      <div class="header-right">
+        <div id="userActions"></div>
+        <a href="carrito.html" class="carrito-btn">🛒 Carrito</a>
+      </div>
+  </header>
+
+    <main>
+        <h2>Consolas Disponibles</h2>
+        <section class="filtros">
+  <h2>🔍 Buscar y Filtrar Productos</h2>
+  <input type="text" id="buscar" placeholder="Buscar por nombre...">
+
+  <div class="filtros-precio">
+    <label>Precio mínimo: <input type="number" id="precioMin" placeholder="0"></label>
+    <label>Precio máximo: <input type="number" id="precioMax" placeholder="999999"></label>
+  </div>
+
+  <div class="filtros-marca">
+    <label><input type="checkbox" class="marca" value="Sony"> Sony</label>
+    <label><input type="checkbox" class="marca" value="Microsoft"> Microsoft</label>
+    
+    <label><input type="checkbox" class="marca" value="Nintendo"> Nintendo</label>
+    
+    <label><input type="checkbox" class="marca" value="Valve"> Valve</label>
+
+  </div>
+
+  <button id="aplicarFiltros">Aplicar Filtros</button>
+  <button id="limpiarFiltros">Limpiar</button>
+</section>
+    <div class="productos-grid">
+
+      <div class="card" data-precio="699990" data-marca="Sony">
+  <img src="https://pro-gamer.uy/wp-content/uploads/2023/04/PS5-web.png" alt="PlayStation 5">
+  <h3>PlayStation 5 - 1TB</h3>
+  <p><b>Marca:</b> Sony</p>
+  <p><b>Precio:</b> $699.990</p>
+  <p><b>Stock:</b> 12 unidades</p>
+
+  <!-- Nueva línea con descripción -->
+  <p class="descripcion">
+    Consola de nueva generación con soporte 4K, SSD ultrarrápido y el innovador mando DualSense con retroalimentación háptica.
+  </p>
+
+  <button class="buy-btn"
+    onclick="addToCart({
+      name:'PlayStation 5 - 1TB',
+      brand:'Sony',
+      price:699990,
+      stock:20,
+      img:'https://pro-gamer.uy/wp-content/uploads/2023/04/PS5-web.png',
+      description:'Consola de nueva generación con soporte 4K, SSD ultrarrápido y el innovador mando DualSense con retroalimentación háptica.'
+    })">
+    🛒 Comprar
+  </button>
+</div>
+
+
+  <!-- Xbox Series X -->
+  <div class="card" data-precio="639990" data-marca="Microsoft">
+    <img src="https://osiriss.lv/image/cache/catalog/as_image/pimg/s/resize/900x900x900x900/231106150013158151-1000x1000.png" alt="Xbox Series X">
+    <h3>Xbox Series X - 1TB</h3>
+    <p><b>Marca:</b> Microsoft</p>
+    <p><b>Precio:</b> $639.990</p>
+    <p><b>Stock:</b> 8 unidades</p>
+    <button class="buy-btn"
+      onclick="addToCart({name:'Xbox Series X - 1TB', brand:'Microsoft', price:639990, stock:8})">🛒 Comprar</button>
+  </div>
+
+  <!-- Nintendo Switch OLED -->
+  <div class="card" data-precio="349990" data-marca="Nintendo">
+    <img src="https://m.media-amazon.com/images/I/71bErt2M5IL._AC_SL1500_.jpg" alt="Nintendo Switch OLED">
+    <h3>Nintendo Switch OLED</h3>
+    <p><b>Marca:</b> Nintendo</p>
+    <p><b>Precio:</b> $349.990</p>
+    <p><b>Stock:</b> 15 unidades</p>
+    <button class="buy-btn"
+      onclick="addToCart({name:'Nintendo Switch OLED', brand:'Nintendo', price:349990, stock:15})">🛒 Comprar</button>
+  </div>
+
+  <!-- Steam Deck 512GB -->
+  <div class="card" data-precio="459990" data-marca="Valve">
+    <img src="https://cdn.wccftech.com/wp-content/uploads/2021/07/Steam-Deck.jpg" alt="Steam Deck">
+    <h3>Steam Deck - 512GB</h3>
+    <p><b>Marca:</b> Valve</p>
+    <p><b>Precio:</b> $459.990</p>
+    <p><b>Stock:</b> 10 unidades</p>
+    <button class="buy-btn"
+      onclick="addToCart({name:'Steam Deck - 512GB', brand:'Valve', price:459990, stock:10})">🛒 Comprar</button>
+  </div>
+
+
+    </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Level-Up Gamer - Todos los derechos reservados</p>
+    </footer>
+      <script src="static/script.js"></script>
+
+</body>
+</html>

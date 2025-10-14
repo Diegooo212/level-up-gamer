@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador - Level-Up Gamer</title>
+    <link rel="stylesheet" href="static/admin.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>🎮 Admin Panel</h2>
+                <a href="index.html" class="back-to-store">← Volver a la Tienda</a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-link active" data-view="dashboard-view">📊 Dashboard</a>
+                <a href="#" class="nav-link" data-view="productos-view">📦 Gestionar Productos</a>
+                <a href="#" class="nav-link" data-view="ventas-view">📈 Reporte de Ventas</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="dashboard-view" class="view active">
+                <h1>Resumen de Actividad (Simulado)</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Ingresos Totales</h3>
+                        <p id="total-revenue">$0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>N° de Ventas</h3>
+                        <p id="total-sales">0</p>
+                    </div>
+                </div>
+                <div class="top-products">
+                    <h2>🔥 Productos Más Vendidos</h2>
+                    <ul id="top-selling-list"><li>No hay datos de ventas.</li></ul>
+                    <h2>🧊 Productos Menos Vendidos</h2>
+                    <ul id="bottom-selling-list"><li>No hay datos de ventas.</li></ul>
+                </div>
+            </section>
+
+            <section id="productos-view" class="view">
+                <h1>Gestionar Productos</h1>
+                <button id="show-add-product-form-btn" class="admin-btn">Añadir Nuevo Producto</button>
+                
+                <form id="product-form" class="hidden">
+                    <input type="hidden" id="product-id">
+                    <h3>Formulario de Producto</h3>
+                    
+                    <input type="text" id="product-name" placeholder="Nombre" required>
+                    <textarea id="product-description" placeholder="Descripción"></textarea>
+                    
+                    <div class="form-group">
+                        <select id="product-category" required>
+                            <option value="">-- Selecciona una Categoría --</option>
+                            <option value="consola">Consolas</option>
+                            <option value="accesorio">Accesorios</option>
+                            <option value="silla gamer">Sillas Gamer</option>
+                            <option value="computador">Computadores</option>
+                        </select>
+                        <select id="product-brand" required disabled>
+                            <option value="">-- Primero elige una categoría --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="number" id="product-price" placeholder="Precio Original" step="1">
+                        <input type="number" id="product-discount-price" placeholder="Precio Oferta (0 si no aplica)" step="1">
+                    </div>
+                    
+                    <label class="checkbox-label"><input type="checkbox" id="product-on-sale"> Marcar como Oferta</label>
+                    
+                    <div class="form-group">
+                        <input type="number" id="product-stock" placeholder="Stock">
+                        <input type="text" id="product-img" placeholder="URL de Imagen">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="admin-btn success">Guardar Producto</button>
+                        <button type="button" id="cancel-edit-btn" class="admin-btn danger hidden">Cancelar</button>
+                    </div>
+                </form>
+                <table id="product-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <section id="ventas-view" class="view">
+                <h1>Reporte de Ventas (Simulado)</h1>
+                <p class="disclaimer">Mostrando el historial de compras del usuario admin.</p>
+                <div class="filters">
+                    <label>Desde: <input type="date" id="start-date"></label>
+                    <label>Hasta: <input type="date" id="end-date"></label>
+                    <button id="filter-sales-btn" class="admin-btn">Filtrar</button>
+                </div>
+                <table id="sales-table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>N° Productos</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    
+    <script src="static/script.js"></script> 
+    <script src="static/admin.js"></script>
+</body>
+</html>
